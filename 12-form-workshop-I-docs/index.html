@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout-Workshop-1</title>
+    <title>Form | Alert | Modal Workshop</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -12,19 +12,184 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+
     <!-- #2 Seperate PoperJS and BootstrapJS-->
-    <script
+    <!-- <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script defer src="main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main
+      class="container-fluid d-flex justify-content-center align-items-center flex-column row-gap-3 bg-secondary"
+    >
+      <div
+        class="header__form px-5 py-3 bg-purple text-light text-center rounded-3 w-100"
+      >
+        <span class="fw-bolder"
+          >Try if free 7 days <br class="d-sm-block d-md-none" />
+        </span>
+        then $20/mo. thereafter
+      </div>
+      
+      <div
+      class="form__container d-flex justify-content-center align-items-center flex-column p-5 bg-light rounded-3 w-100"
+      >
+      <form class="row g-3 needs-validation" novalidate>
+        <!--=============== Alert =================================-->
+        <div id="liveAlertPlaceholder"></div>
+
+          <!--=============== Form Input ============================-->
+          <input
+            type="text"
+            class="form-control fw-bold fs-7 px-4 py-2 text-dark focus-ring focus-ring-secondary"
+            id="first-name"
+            placeholder="First Name"
+            required
+          />
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Please fill in this field.</div>
+
+          <input
+            type="text"
+            class="form-control fw-bold fs-7 px-4 py-2 text-dark focus-ring focus-ring-secondary"
+            id="last-name"
+            placeholder="Last Name"
+            required
+          />
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">
+            Please fill in all fields above and here.
+          </div>
+
+          <input
+            type="email"
+            class="form-control fw-bold fs-7 px-4 py-2 text-dark focus-ring focus-ring-secondary"
+            id="input-email"
+            placeholder="Email Address"
+            required
+          />
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Please enter a valid email.</div>
+
+          <input
+            type="password"
+            class="form-control fw-bold fs-7 px-4 py-2 text-dark focus-ring focus-ring-secondary"
+            id="input-pass"
+            placeholder="Password"
+            required
+          />
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">
+            Please fill in all fields above and here.
+          </div>
+
+          <button
+            class="btn submit-btn text-light bg-light-green py-2 text-uppercase fw-bold fs-7"
+            id="liveAlertBtn"
+            type="submit"
+          >
+            claim your free trial
+          </button>
+        </form>
+
+        <!--=============== Button trigger modal ==================-->
+        <p class="fw-bold fs-9 text-center text-secondary mt-3">
+          By clicking the button you are agreeing to our
+          <span
+            class="pointer text-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Terms and Services
+          </span>
+        </p>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Terms and Services
+                </h1>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                corporis dolore reprehenderit esse sunt est necessitatibus
+                incidunt, excepturi ab obcaecati tenetur magni aperiam
+                accusantium assumenda maxime repellendus eaque magnam porro
+                tempora voluptates sint harum? Doloribus porro autem sequi
+                deserunt voluptates nam, aut praesentium adipisci impedit
+                delectus eaque, consequuntur earum? At ad minima et, hic beatae
+                tempora. Repellat provident cum accusantium ipsum veniam id quos
+                rerum assumenda doloribus similique nisi voluptatem dolore nobis
+                eius quae a dolorum aut sit, ea culpa eveniet veritatis vitae.
+                Eaque, sit illo. Similique soluta quasi, dolores iste eos
+                officia saepe delectus, culpa dicta ipsum, optio repellendus
+                exercitationem laborum. Reprehenderit corporis atque nisi maxime
+                temporibus itaque, deserunt nihil modi consequuntur? Fugit earum
+                error repellendus dolorum! Ipsam eos deserunt aperiam fuga. Modi
+                placeat fuga aliquam libero eaque doloremque facere
+                reprehenderit ab. Dolor possimus tenetur fugit aut
+                necessitatibus aperiam vel beatae autem tempore rem. Sapiente,
+                perspiciatis nulla quos ducimus debitis asperiores eum magni ea
+                ad repellat fugit inventore quisquam ipsum laboriosam? Qui
+                itaque harum temporibus doloremque eum! Dolorum, officia
+                laudantium perferendis soluta quos, incidunt ducimus est
+                praesentium eos vero eligendi facere. Sint excepturi natus non
+                eveniet. Natus ad iusto excepturi, ut necessitatibus quia
+                dolores optio animi illum placeat accusamus? Eligendi
+                asperiores, libero veritatis voluptate accusamus corrupti iusto
+                ab tenetur doloremque dicta, maiores, voluptates quae hic? Quam
+                consequuntur quae aut natus beatae quas blanditiis rerum fugiat
+                at dolore. Ut ipsa ducimus explicabo autem quos incidunt
+                cupiditate, atque ipsum sunt impedit fugit, at libero.
+                Consequatur sint accusantium quos vitae rem libero eaque nulla
+                magni quia rerum tempore laborum ut veniam dolorum nisi, quo qui
+                aspernatur facilis a ipsa. Nostrum alias ducimus officia
+                quisquam, sit natus saepe placeat cum praesentium numquam sequi
+                nam laboriosam corporis recusandae beatae repellat sint
+                molestiae rem culpa odit, nobis porro perferendis facilis?
+                Provident animi labore minus ratione?
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-bs-dismiss="modal"
+                >
+                  I accept the Terms and Services.
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
