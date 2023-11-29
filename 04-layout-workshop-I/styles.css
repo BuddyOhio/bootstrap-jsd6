@@ -1,7 +1,11 @@
 .box {
     background: rgb(48, 84, 139);
-    min-height: 75px;
+    min-height: 100px;
     width: 100%;
+  }
+
+  .box-top {
+    min-height: 150px;
   }
   
   body {
@@ -9,6 +13,7 @@
     /* margin-top: 40px; */
     /* padding: 0 !important; */
     height: 100vh;
+
   }
   
   body::before {
