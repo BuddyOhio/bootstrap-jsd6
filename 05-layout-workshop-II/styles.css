@@ -1,0 +1,60 @@
+.box {
+  background: rgb(48, 84, 139);
+  /* min-height: 465px; */
+  height: 100%;
+  width: 100%;
+}
+
+.bg-purple {
+  background-color: blueviolet;
+}
+
+body {
+  background-color: hsl(196, 100%, 96%);
+  /* margin-top: 40px; */
+  /* padding: 0 !important; */
+  height: 100vh;
+
+}
+
+body::before {
+  content: 'xs';
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: black;
+  padding: 10px;
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: 'sm';
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: 'md';
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: 'lg';
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: 'xl';
+  }
+}
+
+@media (min-width: 1400px) {
+  body::before {
+    content: 'xxl';
+  }
+}
