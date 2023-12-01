@@ -13,12 +13,12 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <!-- #2 Seperate PoperJS and BootstrapJS-->
-    <script
+    <!-- <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
@@ -26,5 +26,48 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="container"></body>
+  <body class="container">
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Hello World!</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ad officiis animi dolor, quam quod eveniet repudiandae repellat temporibus, veniam excepturi delectus officia accusantium sint praesentium ipsum autem minima similique ipsam? Itaque dolor porro, ducimus dignissimos, similique molestias nisi enim eveniet commodi modi illo mollitia cupiditate nesciunt fugit doloribus facere sint a dolorem dolore ea? Sequi eligendi, officiis sapiente quia possimus facere dolorem earum corrupti velit ad explicabo exercitationem illum maiores doloremque eveniet amet! Laudantium molestias hic necessitatibus soluta ab sit expedita. Ea iusto hic explicabo reprehenderit praesentium totam ullam harum aliquid, cumque saepe velit eum ipsum, necessitatibus tempore quibusdam?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
